@@ -1,0 +1,165 @@
+.events-container {
+    padding: 24px;
+  }
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .event-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-left: 4px solid #007BFF;
+  }
+  .event-type-workshop {
+    border-left-color: #007BFF;
+  }
+  .event-type-career {
+    border-left-color: #8B5CF6;
+  }
+  .event-type-lecture {
+    border-left-color: #EF4444;
+  }
+  .event-type-presentation {
+    border-left-color: #10B981;
+  }
+  .event-date-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: #F3F4F6;
+    min-width: 70px;
+    text-align: center;
+  }
+  .event-date {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .event-month {
+    font-size: 14px;
+    color: #6B7280;
+    text-transform: uppercase;
+  }
+  .event-details {
+    flex: 1;
+    padding: 16px;
+    position: relative;
+  }
+  .event-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+  }
+  .event-info {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .event-time, .event-location {
+    font-size: 14px;
+    color: #6B7280;
+  }
+  .today-tag {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: #EF4444;
+    color: white;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+  .event-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  .attendance-selection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .attending-label {
+    font-size: 14px;
+    color: #6B7280;
+  }
+  .attendance-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  .attendance-button {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #D1D5DB;
+    background-color: white;
+    transition: all 0.2s ease;
+  }
+  .yes-button {
+    color: #047857;
+  }
+  .yes-button.selected {
+    background-color: #D1FAE5;
+    border-color: #10B981;
+    color: #047857;
+  }
+  .yes-button:hover:not(.selected) {
+    background-color: #ECFDF5;
+  }
+  .no-button {
+    color: #B91C1C;
+  }
+  .no-button.selected {
+    background-color: #FEE2E2;
+    border-color: #EF4444;
+    color: #B91C1C;
+  }
+  .no-button:hover:not(.selected) {
+    background-color: #FEF2F2;
+  }
+  .no-events {
+    text-align: center;
+    padding: 32px;
+    background-color: #F9FAFB;
+    border-radius: 8px;
+    color: #6B7280;
+  }
+  @media (max-width: 600px) {
+    .event-info {
+      flex-direction: column;
+      gap: 4px;
+    }
+    .attendance-selection {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+  }
+
+
+  .event-attendees {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.event-attendees ul {
+  padding-left: 20px;
+  margin: 4px 0 0;
+}
+
+.event-attendees li {
+  list-style: disc;
+}

@@ -1,0 +1,469 @@
+/* Base Styles */
+.cohort-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #2d3436;
+  }
+  
+  .cohort-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .cohort-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1d3557;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .create-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .create-btn:hover {
+    background: #564fd8;
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .search-bar {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    color: #636e72;
+  }
+  
+  .filter-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-dropdown select {
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+    appearance: none;
+    cursor: pointer;
+    min-width: 180px;
+  }
+  
+  .filter-dropdown select:focus {
+    outline: none;
+    border-color: #6c63ff;
+  }
+  
+  .filter-icon {
+    position: absolute;
+    left: 1rem;
+    color: #636e72;
+  }
+  
+  /* Cohort Form */
+  .cohort-form-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cohort-form-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #1d3557;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .cancel-btn, .submit-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .cancel-btn {
+    background: none;
+    border: 1px solid #dfe6e9;
+    color: #636e72;
+  }
+  
+  .cancel-btn:hover {
+    background: #f8f9fc;
+  }
+  
+  .submit-btn {
+    background: #6c63ff;
+    color: white;
+    border: none;
+  }
+  
+  .submit-btn:hover {
+    background: #564fd8;
+  }
+  
+  /* Cohort Layout */
+  .cohort-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 992px) {
+    .cohort-layout {
+      grid-template-columns: 350px 1fr;
+    }
+  }
+  
+  .cohort-list {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    max-height: calc(100vh - 250px);
+    overflow-y: auto;
+  }
+  
+  .cohort-list h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #1d3557;
+  }
+  
+  .empty-state {
+    padding: 2rem;
+    text-align: center;
+    color: #636e72;
+  }
+  
+  .cohort-card {
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #dfe6e9;
+  }
+  
+  .cohort-card:hover {
+    border-color: #6c63ff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cohort-card.selected {
+    border-color: #6c63ff;
+    background: rgba(108, 99, 255, 0.05);
+  }
+  
+  .cohort-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cohort-card-header h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1d3557;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .status-badge.active {
+    background: rgba(46, 125, 50, 0.1);
+    color: #2e7d32;
+  }
+  
+  .status-badge.upcoming {
+    background: rgba(251, 140, 0, 0.1);
+    color: #fb8c00;
+  }
+  
+  .status-badge.graduated {
+    background: rgba(121, 85, 72, 0.1);
+    color: #795548;
+  }
+  
+  .program {
+    color: #636e72;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .cohort-dates {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #636e72;
+    margin-bottom: 0.5rem;
+  }
+  
+  .student-count {
+    font-size: 0.9rem;
+    color: #636e72;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cohort-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+  
+  .edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .edit-btn {
+    color: #636e72;
+  }
+  
+  .edit-btn:hover {
+    color: #6c63ff;
+    background: rgba(108, 99, 255, 0.1);
+  }
+  
+  .delete-btn {
+    color: #636e72;
+  }
+  
+  .delete-btn:hover {
+    color: #d63031;
+    background: rgba(214, 48, 49, 0.1);
+  }
+  
+  /* Cohort Details */
+  .cohort-details {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+  }
+  
+  .details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dfe6e9;
+  }
+  
+  .details-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1d3557;
+  }
+  
+  .details-meta {
+    margin-bottom: 1.5rem;
+  }
+  
+  .details-meta p {
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+  }
+  
+  .details-meta strong {
+    font-weight: 500;
+  }
+  
+  /* Students Section */
+  .students-section {
+    margin-top: 2rem;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .section-header h3 {
+    font-size: 1.25rem;
+    color: #1d3557;
+  }
+  
+  .add-student-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .add-student-btn:hover {
+    background: #564fd8;
+  }
+  
+  .students-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .student-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #dfe6e9;
+    transition: all 0.2s ease;
+  }
+  
+  .student-card:hover {
+    border-color: #6c63ff;
+  }
+  
+  .student-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .student-info p {
+    color: #636e72;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .joined-date {
+    font-size: 0.8rem;
+    color: #b2bec3;
+  }
+  
+  .remove-btn {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 1px solid #ffebee;
+    color: #d63031;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .remove-btn:hover {
+    background: #ffebee;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cohort-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .controls {
+      flex-direction: column;
+    }
+    
+    .search-bar, .filter-dropdown {
+      width: 100%;
+    }
+  }

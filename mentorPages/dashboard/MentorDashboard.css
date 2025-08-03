@@ -1,0 +1,302 @@
+:root {
+    --primary: #6c63ff;
+    --primary-light: #a29bfe;
+    --secondary: #00cec9;
+    --accent: #ff6584;
+    --dark: #2d3436;
+    --light: #f8f9fc;
+    --white: #ffffff;
+    --gray: #6c757d;
+    --light-gray: #e9ecef;
+  }
+  
+  /* Base Styles */
+  .facilitator-dashboard {
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: var(--light);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Background Elements */
+  .dashboard-bg-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .bg-circle-1, .bg-circle-2, .bg-circle-3 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.1;
+  }
+  
+  .bg-circle-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--primary);
+    top: -50px;
+    left: -50px;
+  }
+  
+  .bg-circle-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--secondary);
+    bottom: -100px;
+    right: -100px;
+  }
+  
+  .bg-circle-3 {
+    width: 200px;
+    height: 200px;
+    background: var(--accent);
+    top: 50%;
+    right: 20%;
+  }
+  
+  /* Header */
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .welcome-message h1 {
+    font-size: 2.2rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .highlight {
+    color: var(--primary);
+  }
+  
+  .subtitle {
+    color: var(--gray);
+    font-size: 1rem;
+  }
+  
+
+
+.avatar-circle {
+  width: 60px;         /* size of the avatar circle */
+  height: 60px;
+  border-radius: 50%;  /* makes the container circular */
+  /* clips the image to the circle */
+  border: 2px solid #4CAF50; /* optional: a green border around the avatar */
+  position: relative;
+  cursor: pointer;
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* cover the circle without distortion */
+  display: block;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 14px;
+  height: 14px;
+  background-color: #4CAF50; /* green status dot */
+  border: 2px solid white;   /* white border around dot */
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+  /* Overview Cards */
+  .dashboard-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .overview-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .overview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+  }
+  
+  .card-icon {
+    font-size: 1.8rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .card-1 .card-icon { background: rgba(108, 99, 255, 0.1); color: var(--primary); }
+  .card-2 .card-icon { background: rgba(0, 206, 201, 0.1); color: var(--secondary); }
+  .card-3 .card-icon { background: rgba(255, 101, 132, 0.1); color: var(--accent); }
+  .card-4 .card-icon { background: rgba(45, 52, 54, 0.1); color: var(--dark); }
+  
+  .card-content h3 {
+    font-size: 1rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .count {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.25rem;
+  }
+  
+  .change {
+    font-size: 0.8rem;
+    color: var(--gray);
+  }
+  
+  .positive {
+    color: #4caf50;
+  }
+  
+  .neutral {
+    color: #ff9800;
+  }
+  
+  /* Recent Activity */
+  .dashboard-recent {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+    color: var(--dark);
+  }
+  
+  .view-all {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+  }
+  
+  .view-all:hover {
+    color: var(--primary-dark);
+    gap: 0.5rem;
+  }
+  
+  .activity-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .activity-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-gray);
+    align-items: flex-start;
+  }
+  
+  .activity-item:last-child {
+    border-bottom: none;
+  }
+  
+  .activity-icon {
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .activity-details {
+    flex: 1;
+  }
+  
+  .activity-details p {
+    margin-bottom: 0.25rem;
+    color: var(--dark);
+  }
+  
+  .activity-time {
+    font-size: 0.8rem;
+    color: var(--gray);
+  }
+  
+  .upcoming .activity-icon {
+    background: rgba(108, 99, 255, 0.1);
+    color: var(--primary);
+  }
+  
+  .upcoming .activity-time {
+    color: var(--primary);
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .dashboard-overview {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard-overview {
+      grid-template-columns: 1fr;
+    }
+    
+    .dashboard-header h1 {
+      font-size: 1.8rem;
+    }
+  }

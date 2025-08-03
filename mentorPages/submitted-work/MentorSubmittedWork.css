@@ -1,0 +1,329 @@
+/* Base Styles */
+.submitted-work-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #2d3436;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1d3557;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .search-bar {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    color: #636e72;
+  }
+  
+  .filter-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-dropdown select {
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+    appearance: none;
+    cursor: pointer;
+    min-width: 180px;
+  }
+  
+  .filter-dropdown select:focus {
+    outline: none;
+    border-color: #6c63ff;
+  }
+  
+  .filter-icon {
+    position: absolute;
+    left: 1rem;
+    color: #636e72;
+  }
+  
+  /* Submissions Grid */
+  .submissions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 992px) {
+    .submissions-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .submissions-list {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .list-header {
+    display: none;
+    padding: 1rem;
+    font-weight: 600;
+    background: #f8f9fc;
+    border-bottom: 1px solid #dfe6e9;
+  }
+  
+  @media (min-width: 768px) {
+    .list-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr auto;
+      gap: 1rem;
+    }
+  }
+  
+  .submission-item {
+    padding: 1rem;
+    border-bottom: 1px solid #dfe6e9;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .submission-item:hover {
+    background: #f8f9fc;
+  }
+  
+  @media (min-width: 768px) {
+    .submission-item {
+      grid-template-columns: 1fr 1fr 1fr 1fr auto;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  
+  .submission-item:last-child {
+    border-bottom: none;
+  }
+  
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .status-badge.submitted {
+    background: #fff3e0;
+    color: #e65100;
+  }
+  
+  .status-badge.graded {
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .status-badge.late {
+    background: #ffebee;
+    color: #c62828;
+  }
+  
+  .status-badge .icon {
+    font-size: 1rem;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .download-btn {
+    background: none;
+    border: none;
+    color: #6c63ff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .download-btn:hover {
+    background: rgba(108, 99, 255, 0.1);
+  }
+  
+  /* Submission Details */
+  .submission-details {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    position: sticky;
+    top: 1rem;
+  }
+  
+  .details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dfe6e9;
+  }
+  
+  .details-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1d3557;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #636e72;
+    transition: all 0.2s ease;
+  }
+  
+  .close-btn:hover {
+    color: #d63031;
+  }
+  
+  .student-info {
+    margin-bottom: 1.5rem;
+  }
+  
+  .student-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .student-info p {
+    color: #636e72;
+    margin-bottom: 0.5rem;
+  }
+  
+  .file-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6c63ff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    transition: all 0.2s ease;
+  }
+  
+  .file-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form Styles */
+  .grade-section, .comments-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .grade-section label, .comments-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .grade-section select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .comments-section textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .cancel-btn, .submit-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .cancel-btn {
+    background: none;
+    border: 1px solid #dfe6e9;
+    color: #636e72;
+  }
+  
+  .cancel-btn:hover {
+    background: #f8f9fc;
+  }
+  
+  .submit-btn {
+    background: #6c63ff;
+    color: white;
+    border: none;
+  }
+  
+  .submit-btn:hover {
+    background: #564fd8;
+  }

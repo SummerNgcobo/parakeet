@@ -1,0 +1,322 @@
+/* Base Styles */
+.events-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #2d3436;
+  }
+  
+  .events-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .events-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1d3557;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .create-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .create-btn:hover {
+    background: #564fd8;
+  }
+  
+  /* Event Form */
+  .event-form-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .event-form-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #1d3557;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .cancel-btn, .submit-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .cancel-btn {
+    background: none;
+    border: 1px solid #dfe6e9;
+    color: #636e72;
+  }
+  
+  .cancel-btn:hover {
+    background: #f8f9fc;
+  }
+  
+  .submit-btn {
+    background: #6c63ff;
+    color: white;
+    border: none;
+  }
+  
+  .submit-btn:hover {
+    background: #564fd8;
+  }
+  
+  /* Events List */
+  .events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    color: #636e72;
+  }
+  
+  .event-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+    border-left: 4px solid #6c63ff;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-card.workshop {
+    border-left-color: #00cec9;
+  }
+  
+  .event-card.lecture {
+    border-left-color: #6c63ff;
+  }
+  
+  .event-card.deadline {
+    border-left-color: #ff6584;
+  }
+  
+  .event-card.meeting {
+    border-left-color: #a29bfe;
+  }
+  
+  .event-card.other {
+    border-left-color: #636e72;
+  }
+  
+  .event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .event-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1d3557;
+  }
+  
+  .event-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .edit-btn {
+    color: #636e72;
+  }
+  
+  .edit-btn:hover {
+    color: #6c63ff;
+    background: rgba(108, 99, 255, 0.1);
+  }
+  
+  .delete-btn {
+    color: #636e72;
+  }
+  
+  .delete-btn:hover {
+    color: #d63031;
+    background: rgba(214, 48, 49, 0.1);
+  }
+  
+  .event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #636e72;
+    font-size: 0.9rem;
+  }
+  
+  .event-type {
+    margin-bottom: 1rem;
+  }
+  
+  .type-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .type-badge.workshop {
+    background: rgba(0, 206, 201, 0.1);
+    color: #00a8a8;
+  }
+  
+  .type-badge.lecture {
+    background: rgba(108, 99, 255, 0.1);
+    color: #6c63ff;
+  }
+  
+  .type-badge.deadline {
+    background: rgba(255, 101, 132, 0.1);
+    color: #ff6584;
+  }
+  
+  .type-badge.meeting {
+    background: rgba(162, 155, 254, 0.1);
+    color: #a29bfe;
+  }
+  
+  .type-badge.other {
+    background: rgba(99, 110, 114, 0.1);
+    color: #636e72;
+  }
+  
+  .event-description {
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .event-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .attendees {
+    font-size: 0.9rem;
+    color: #636e72;
+  }
+  
+  .view-btn {
+    background: none;
+    border: 1px solid #dfe6e9;
+    color: #6c63ff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .view-btn:hover {
+    background: rgba(108, 99, 255, 0.1);
+    border-color: #6c63ff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .events-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .events-list {
+      grid-template-columns: 1fr;
+    }
+  }
